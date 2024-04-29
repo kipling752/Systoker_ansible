@@ -1,0 +1,2 @@
+httpd_service_name: httpd
+httpd_config_file: /etc/httpd/conf/httpd.conf

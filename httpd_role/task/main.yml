@@ -1,0 +1,11 @@
+---
+- name: Install httpd package
+  yum:
+    name: "{{ httpd_service_name }}"
+    state: present
+
+- name: Copy custom configuration file
+  copy:
+    src: files/httpd.conf
+    dest: "{{ httpd_config_file }}"
+  notify: restart httpd
